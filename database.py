@@ -15,11 +15,9 @@ def load_and_store_documents(path):
             except Exception as e:
                 logging.error(f"Error loading {file}: {e}")
     
-    # Split text into chunks
     text_splitter = RecursiveCharacterTextSplitter(chunk_size=1000, chunk_overlap=150)
     docs = text_splitter.split_documents(documents)
 
-    # Use a better embedding model for improved context understanding
     modelPath = "sentence-transformers/all-mpnet-base-v2"
 
     embeddings = HuggingFaceEmbeddings(

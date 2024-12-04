@@ -28,9 +28,9 @@ def scrape_rulebooks(url, save_path):
                 f.write(response.content)
             print(f"Downloaded: {filename}")
             
-# Example Usage
+
 scrape_rulebooks("https://josaa.nic.in/", documents_path)
-# scrape_rulebooks("https://josaa.nic.in/restrictions-at-institutes-academic-programs-level/", documents_path)
+scrape_rulebooks("https://josaa.nic.in/restrictions-at-institutes-academic-programs-level/", documents_path)
 scrape_rulebooks("https://josaa.nic.in/information-bulletin/", documents_path)
-# scrape_rulebooks("https://csab.nic.in/", documents_path)
-# scrape_rulebooks("https://mcc.nic.in/ug-medical-counselling/", documents_path)
+scrape_rulebooks("https://csab.nic.in/", documents_path)
+scrape_rulebooks("https://mcc.nic.in/ug-medical-counselling/", documents_path)
